@@ -1,0 +1,17 @@
+/* Estilos para ItemCount */
+.contador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.contador-row button {
+  flex: 1;
+  padding: 8px 0;
+}
+.contador-row p {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}

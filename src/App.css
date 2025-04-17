@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ItemListContainer, .ItemDetailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.Item, .ItemDetail {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+}
+
+.Item img, .ItemDetail img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.contador-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.contador-row button {
+  flex: 1;
+  padding: 8px 0;
+}
+.contador-row p {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
