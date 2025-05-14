@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { ClipLoader } from 'react-spinners'; // Importamos el spinner
-import { getProductos, getProductoPorCategorias } from '../asyncmock';
+import { getProductos, getProductoPorCategorias } from '../../mocks/asyncmock';
 import ItemList from '../ItemList/ItemList';
 import { useNavigate } from 'react-router-dom';
 

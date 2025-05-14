@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getUnProducto } from '../asyncmock'
+import { getUnProducto } from '../../mocks/asyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import ClipLoader from 'react-spinners/ClipLoader'
 import { useParams } from 'react-router-dom';
