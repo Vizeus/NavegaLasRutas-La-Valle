@@ -17,7 +17,7 @@ const CartWidget = () => {
     }
   }, [cantidadTotal]);
 
-  const imgCarrito = "../../../public/images/carrito.png";
+  const imgCarrito = "/images/Carrito.png";
     
   return (
     <div>

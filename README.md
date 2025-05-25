@@ -26,3 +26,7 @@ Entrega final de React de la comision #75910. El .env no lo puse en el .gitignor
 - Filtros por categoría 
 - Contador de productos en el carrito
 - Persistencia de productos y detalles simulada (mock y Firebase)
+
+## Dominio
+
+https://proyecto-final-la-valle.vercel.app/
