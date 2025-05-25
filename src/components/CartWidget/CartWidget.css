@@ -30,17 +30,14 @@
     line-height: 1;
 }
 
-/* Asegura que el Link que envuelve tenga position: relative para el badge */
 .cantidadCarrito ~ .imgCarrito, .imgCarrito {
     position: relative;
 }
 
-/* Si el contenedor directo es un div, también aseguramos position: relative */
 .cantidadCarrito ~ .imgCarrito, .imgCarrito, .imgCarrito:parent {
     position: relative;
 }
 
-/* Asegura que el Link que envuelve tenga position: relative para el badge */
 .cantidadCarrito ~ .imgCarrito, .imgCarrito {
     position: relative;
 }
@@ -53,4 +50,26 @@
 .carrito-container {
     position: relative;
     display: inline-block;
+}
+
+.cantidadCarrito.bump {
+  animation: bump 0.35s cubic-bezier(0.25, 1.5, 0.5, 1) both;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.25);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

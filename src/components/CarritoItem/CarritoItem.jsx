@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast } from 'react-toastify';
 import { CarritoContext } from "../../core/contexts/CarritoContext";
 
 export const CarritoItem = ({ item, cantidad }) => {
@@ -16,7 +17,10 @@ export const CarritoItem = ({ item, cantidad }) => {
                 <p>Precio: ${item.precio}</p>
             </div>
             {/* Boton para eliminar el producto */}
-            <button className="btn-eliminar" onClick={() => eliminarDelCarrito(item.id)}>Eliminar</button>
+            <button className="btn-eliminar" onClick={() => {
+                eliminarDelCarrito(item.id);
+                toast.error(`Eliminaste ${item.nombre} del carrito`);
+            }}>Eliminar</button>
         </div>
     )
 }

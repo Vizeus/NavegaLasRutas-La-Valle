@@ -8,6 +8,7 @@ import { ProductosProvider } from './core/providers/ProductosProvider'
 import { CarritoProvider } from './core/providers/CarritoProvider.jsx';
 import Carrito from './components/Carrito/Carrito.jsx';
 import Checkout from './components/Checkout/Checkout';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Footer />
       </div>
     </ProductosProvider>
+    <ToastContainer autoClose={2000} position="bottom-right"/>
     </CarritoProvider>
   );
 }

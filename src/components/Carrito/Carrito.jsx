@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CarritoContext } from "../../core/contexts/CarritoContext";
 import { Link } from "react-router-dom";
 import CarritoItem from "../CarritoItem/CarritoItem";
+import { toast } from 'react-toastify';
 import './Carrito.css';
 
 const Carrito = () => {
@@ -28,7 +29,10 @@ const Carrito = () => {
         <h3>Cantidad total: {cantidadTotal}</h3>
         <div className="carrito-botones">
             <button 
-                onClick={vaciarCarrito} 
+                onClick={() => {
+                    vaciarCarrito();
+                    toast.error('Vaciaste el carrito');
+                }} 
                 className="boton-rojo"
             >
                 Vaciar carrito

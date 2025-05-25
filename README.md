@@ -1,6 +1,8 @@
-NavegaLasRutas+La Valle
+ProyectoFinal+La Valle
 
-Entrega N° 2 de React de la comision #75910
+# Supermercado Siempre Viva
+
+Entrega final de React de la comision #75910. El .env no lo puse en el .gitignore para que lo pueda ver profe. El sitio basicamente es un simulador reactivo de un supermercado con una base de datos dinámica.
 
 ## Tecnologías usadas
 
@@ -11,6 +13,7 @@ Entrega N° 2 de React de la comision #75910
 - CSS Modules
 - Firebase (Firestore)
 - React Spinners
+- Toastify
 
 ## Funcionalidades principales
 

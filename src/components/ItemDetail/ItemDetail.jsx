@@ -2,6 +2,7 @@ import { useState, useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { CarritoContext } from '../../core/contexts/CarritoContext';
+import { toast } from 'react-toastify';
 import './ItemDetail.css'
 
 const ItemDetail = ({ id, nombre, precio, descripcion, imagen, stock, descripcionLarga }) => {
@@ -13,13 +14,14 @@ const ItemDetail = ({ id, nombre, precio, descripcion, imagen, stock, descripcio
         setAgregarCantidad(cantidad)
         console.log("Productos agregados:" + cantidad)
         const item = {
-        id,
-        nombre,
-        precio,
-        descripcion,
-        imagen,
-    }
-        agregarAlCarrito(item, cantidad) // Aca llamamos a la funcion agregarAlCarrito que viene del contexto
+            id,
+            nombre,
+            precio,
+            descripcion,
+            imagen,
+        }
+        agregarAlCarrito(item, cantidad)
+        toast.success(`¡${nombre} x${cantidad} agregado al carrito!`);
         console.log("Producto agregado al carrito: " + item.nombre)
     }
 
