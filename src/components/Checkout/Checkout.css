@@ -1,0 +1,80 @@
+.checkout-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(67, 206, 162, 0.13);
+  text-align: center;
+}
+
+.checkout-container h2 {
+  color: #185a9d;
+  margin-bottom: 1.2rem;
+}
+
+.checkout-container p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/***** ESTILOS MEJORADOS PARA EL FORMULARIO *****/
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(24, 90, 157, 0.10);
+  margin-bottom: 2rem;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 500;
+  color: #185a9d;
+  font-size: 1.05rem;
+  gap: 0.4rem;
+  letter-spacing: 0.01em;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #b6c6e3;
+  border-radius: 8px;
+  background: #f8fbff;
+  font-size: 1rem;
+  color: #185a9d;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(24, 90, 157, 0.03);
+}
+
+
+.checkout-form input[type="text"]:focus,
+.checkout-form input[type="email"]:focus,
+.checkout-form input[type="tel"]:focus {
+  border-color: #43cea2;
+  box-shadow: 0 2px 8px rgba(67, 206, 162, 0.07);
+}
+
+.checkout-form input[type="text"]::placeholder,
+.checkout-form input[type="email"]::placeholder,
+.checkout-form input[type="tel"]::placeholder {
+  color: #b6c6e3;
+  opacity: 1;
+}
+
+/* No tocar la clase del botón .boton-gradiente */

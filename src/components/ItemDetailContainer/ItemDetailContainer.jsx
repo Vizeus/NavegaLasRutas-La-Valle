@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { getUnProducto } from '../../mocks/asyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import ClipLoader from 'react-spinners/ClipLoader'
 import { useParams } from 'react-router-dom';
+import { db } from '../../services/firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const { id } = useParams(); // Obtener el id de la URL
@@ -10,19 +11,25 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getUnProducto(parseInt(id)) // Usar el id de la URL para obtener el producto
-            .then((respuesta) => {
-                if (respuesta) {
-                    setProducto(respuesta);
+        const obtenerProducto = async () => {
+            setLoading(true);
+            try {
+                const productosRef = collection(db, 'productos');
+                const q = query(productosRef, where('id', '==', parseInt(id)));
+                const querySnapshot = await getDocs(q);
+                if (!querySnapshot.empty) {
+                    const docSnap = querySnapshot.docs[0];
+                    setProducto({ id: docSnap.id, ...docSnap.data() });
                 } else {
                     setProducto({ nombre: "Producto no encontrado", descripcion: "", precio: "-", imagen: "" });
                 }
-                setLoading(false);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.log(error);
-                setLoading(false);
-            });
+                setProducto({ nombre: "Error al cargar producto", descripcion: "", precio: "-", imagen: "" });
+            }
+            setLoading(false);
+        };
+        obtenerProducto();
     }, [id]); // Dependencia en el id para que se actualice al cambiar
 
     return (
@@ -32,7 +39,7 @@ const ItemDetailContainer = () => {
                     <div style={{ marginRight: '20px' }}><ClipLoader color="lightblue" size={50} /></div> <p>Cargando detalles...</p>
                 </div>
             ) : (
-                <ItemDetail {...producto} />
+                <ItemDetail {...producto} descripcionLarga={producto.descripcionLarga} />
             )}
         </div>
     );

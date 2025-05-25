@@ -1,17 +1,64 @@
 /* Estilos para ItemCount */
 .contador {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 10px;
+  background: #f6f7fb;
+  border-radius: 22px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  margin-bottom: 10px;
 }
-.contador-row button {
-  flex: 1;
-  padding: 8px 0;
+
+.contador button {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contador-row p {
-  margin: 0;
+
+.contador button:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  transform: scale(1.08);
+}
+
+.contador p {
+  margin: 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #185a9d;
+  min-width: 20px;
   text-align: center;
-  flex: 1;
+}
+
+.agregar-btn {
+  display: block;
+  margin: 0 auto 6px auto;
+  padding: 8px 28px;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.agregar-btn:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  transform: translateY(-2px) scale(1.04);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }

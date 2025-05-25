@@ -1,3 +1,56 @@
 .imgCarrito {
-    width: 50px;
+    width: 49px;
+    height: 49px;
+    transition: transform 0.18s, filter 0.18s;
+    cursor: pointer;
+    position: relative;
+}
+
+.cantidadCarrito {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    background: linear-gradient(90deg, #ff9800 0%, #ff5e62 100%);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 1px 6px rgba(255, 152, 0, 0.18);
+    min-width: 16px;
+    min-height: 16px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #fff;
+    z-index: 2;
+    pointer-events: none;
+    font-family: inherit;
+    line-height: 1;
+}
+
+/* Asegura que el Link que envuelve tenga position: relative para el badge */
+.cantidadCarrito ~ .imgCarrito, .imgCarrito {
+    position: relative;
+}
+
+/* Si el contenedor directo es un div, también aseguramos position: relative */
+.cantidadCarrito ~ .imgCarrito, .imgCarrito, .imgCarrito:parent {
+    position: relative;
+}
+
+/* Asegura que el Link que envuelve tenga position: relative para el badge */
+.cantidadCarrito ~ .imgCarrito, .imgCarrito {
+    position: relative;
+}
+
+.imgCarrito:hover {
+    transform: scale(1.13) rotate(-8deg);
+    filter: drop-shadow(0 2px 8px #3182ce88) brightness(1.15);
+}
+
+.carrito-container {
+    position: relative;
+    display: inline-block;
 }

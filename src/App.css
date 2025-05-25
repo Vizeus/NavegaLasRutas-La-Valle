@@ -6,11 +6,11 @@ body {
 }
 
 .App {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  flex: 1 0 auto;
+  width: 100%;
 }
 
 .ItemListContainer, .ItemDetailContainer {
@@ -39,6 +39,22 @@ body {
 h2, h3 {
   margin: 10px 0;
 }
+
+.not-found-center {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.not-found-center h1 {
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 
 p {
   margin: 5px 0;
