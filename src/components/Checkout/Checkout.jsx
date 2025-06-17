@@ -108,6 +108,8 @@ const Checkout = () => {
   }
 
   return (
+   <>
+   <meta name="robots" content="noindex" />
     <div className="checkout-container">
       <h2>Finalizar compra</h2>
       <form className="checkout-form" onSubmit={handleSubmit}>
@@ -135,6 +137,7 @@ const Checkout = () => {
         <p>Cantidad de productos: <b>{cantidadTotal}</b></p>
       </div>
     </div>
+   </>  
   );
 };
 

@@ -21,6 +21,8 @@ const Carrito = () => {
 
 
   return (
+    <>
+    <meta name="robots" content="noindex" />
     <div>
         {
         carrito.map(producto => <CarritoItem key={producto.item.id} {...producto}/>) 
@@ -44,6 +46,7 @@ const Carrito = () => {
             </Link>
         </div>
     </div>
+    </>
   )
 }
 

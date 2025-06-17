@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proyecto-final-la-valle.vercel.app/sitemap.xml
